@@ -9,5 +9,5 @@ def crear_usuario(request):
 def recuperar(request):
     return render(request, 'recuperar.html')
 
-def admin(request):
-    return render(request, 'admin.html')
+def administrador(request):
+    return render(request, 'administrador.html')

@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administración</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/admin.css' %}">
+    <link rel="stylesheet" href="{% static 'css/administrador.css' %}">
     <link rel="icon" href="{% static 'img/logo.png' %}">
 </head>
 <body>
     <div class="container">
         <!-- Encabezado -->
         <header class="d-flex justify-content-between align-items-center py-3">
-            <h1 class="display-6">Bienvenido, Administrador</h1>
-            <a href="{% url 'logout' %}" class="btn btn-danger">Cerrar sesión</a>
+            <h1 class="display-6">Bienvenido</h1>
         </header>
         <!-- Contenedor principal -->
         <div class="row">
@@ -30,7 +29,6 @@
                             <li><strong>Email:</strong> admin@example.com</li>
                             <li><strong>Rol:</strong> Administrador</li>
                         </ul>
-                        <a href="{% url 'editar_perfil' %}" class="btn btn-primary w-100">Editar Perfil</a>
                     </div>
                 </div>
             </div>
@@ -41,35 +39,31 @@
                         <h4>Asistencias de Talleres</h4>
                     </div>
                     <div class="card-body">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Taller</th>
-                                    <th>Fecha</th>
-                                    <th>Asistentes</th>
-                                    <th>Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Taller de Programación</td>
-                                    <td>01/04/2025</td>
-                                    <td>20</td>
-                                    <td><a href="#" class="btn btn-info btn-sm">Ver Detalles</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Taller de Diseño</td>
-                                    <td>02/04/2025</td>
-                                    <td>15</td>
-                                    <td><a href="#" class="btn btn-info btn-sm">Ver Detalles</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!-- Hacer que la tabla sea desplazable si es necesario -->
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Taller</th>
+                                        <th>Fecha</th>
+                                        <th>Asistentes</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-talleres">
+                                    <!-- Los talleres se llenarán aquí mediante JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Cargar scripts de Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Incluir el archivo JavaScript para administrar los talleres -->
+    <script src="{% static 'js/administrador.js' %}"></script>
 </body>
 </html>

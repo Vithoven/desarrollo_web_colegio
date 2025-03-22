@@ -1,0 +1,135 @@
+/* administrador.css */
+
+/* Establecer fondo azul y estilo general */
+body {
+    background-color: #2E5AA6; /* Fondo azul */
+    color: black; /* Cambiado a negro para todo el texto */
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal para la vista del administrador */
+.container {
+    margin-top: 50px;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: black; /* Aseguramos que el texto en el contenedor también sea negro */
+}
+
+/* Logo en la parte superior (si corresponde) */
+.logo img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Agrupación de los formularios */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Etiquetas de los formularios */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: black; /* Color negro para las etiquetas */
+}
+
+/* Estilo para los inputs del formulario */
+input.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: black; /* Aseguramos que el texto dentro de los inputs sea negro */
+}
+
+/* Estilo para mostrar mensajes de error */
+small.text-danger {
+    display: block;
+    margin-top: 5px;
+    color: red;
+}
+
+/* Estilo para los botones */
+button, #login-btn {
+    width: 100%;
+    background-color: #2E5AA6; /* Azul para el botón */
+    border: none;
+    color: white; /* Texto blanco en los botones */
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Efecto hover para el botón */
+button:hover, #login-btn:hover {
+    background-color: #1a478b; /* Azul más oscuro al pasar el cursor */
+}
+
+/* Enlaces */
+a {
+    color: #2E5AA6; /* Azul para enlaces */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+/* Estilo para el contenedor de registro */
+.contenedor-registro a {
+    font-size: 14px;
+    color: #2E5AA6;
+}
+
+/* Estilo para el texto centrado de los enlaces */
+.text-center a {
+    font-size: 14px;
+    color: #2E5AA6;
+}
+
+/* Estilos para tablas, si las tienes en la vista */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #000000;
+    text-align: left;
+    color: black; /* Color negro para texto dentro de las celdas de las tablas */
+}
+
+tr:nth-child(even) {
+    background-color: #ebffe6; /* Fondo azul claro para filas pares */
+}
+
+/* Eliminar el efecto hover sobre las filas */
+tr:hover {
+    background-color: inherit; /* Eliminar el efecto hover */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    input.form-control, button {
+        font-size: 0.9em;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+}
