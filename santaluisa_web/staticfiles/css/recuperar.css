@@ -1,0 +1,70 @@
+body {
+    background-color: #2E5AA6; /* Fondo azul */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;  /* Aumento el tamaño máximo a 800px */
+    width: 100%;
+    padding: 20px;
+}
+
+.card {
+    background: white; /* Fondo blanco */
+    border-radius: 10px;
+    padding: 30px;  /* Mayor padding para que no se vea comprimido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background: none;
+    border-bottom: none;
+    text-align: center;
+    padding-bottom: 0;
+}
+
+.card-header h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Aumento de espacio entre los campos */
+}
+
+.form-control {
+    border-radius: 5px;
+    padding: 12px;  /* Más espacio en el campo de entrada */
+    font-size: 1rem;
+}
+
+.btn-dark {
+    background-color: #2E5AA6;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;  /* Botón a 100% del contenedor */
+}
+
+.btn-dark:hover {
+    background-color: #1c457b;
+}
+
+.btn-link {
+    text-align: center;
+    display: block;
+    margin-top: 20px; /* Espaciado más grande para el enlace */
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
