@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/administrador.css' %}">
+    <link rel="icon" href="{% static 'img/logo.png' %}">
+</head>
+<body>
+    <div class="container">
+        <!-- Encabezado -->
+        <header class="d-flex justify-content-between align-items-center py-3">
+            <h1 class="display-6">Bienvenido</h1>
+        </header>
+        <!-- Contenedor principal -->
+        <div class="row">
+            <!-- Información de la cuenta del Admin -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Mi Cuenta</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Nombre:</strong> Admin Nombre</li>
+                            <li><strong>Email:</strong> admin@example.com</li>
+                            <li><strong>Rol:</strong> Administrador</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Apartado de Asistencias de Talleres -->
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Asistencias de Talleres</h4>
+                    </div>
+                    <div class="card-body">
+                        <!-- Hacer que la tabla sea desplazable si es necesario -->
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Taller</th>
+                                        <th>Fecha</th>
+                                        <th>Asistentes</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-talleres">
+                                    <!-- Los talleres se llenarán aquí mediante JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cargar scripts de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Incluir el archivo JavaScript para administrar los talleres -->
+    <script src="{% static 'js/administrador.js' %}"></script>
+</body>
+</html>
